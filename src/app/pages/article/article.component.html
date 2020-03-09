@@ -1,0 +1,39 @@
+<div *ngIf="articleService.looading">
+  <main class="page mt-4">
+    <!-- Content -->
+    <div class="page-content">
+
+        <!-- Placeholder Content -->
+        <div class="placeholder-content">
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+        </div>
+
+    </div>
+
+  </main>
+  </div>
+<div *ngIf="!articleService.looading" >
+<div class="card border-primary mt-4">
+<div class="card-header ">
+  <h1 class="card-title">{{article.title}}</h1>
+  <span class="badge badge-pill badge-dark"><i class="fa fa-calendar" aria-hidden="true">{{article.publishDate | date:'dd.MM.yyyy'}}</i> </span>
+  <span class="mr-1"></span>
+  <span class="badge badge-pill badge-success"><i class="fa fa-folder">{{article.category.categoryName}}</i></span>
+  <span class="mr-1"></span><span class="badge badge-pill badge-success"><i class="fa fa-eye">{{article.viewCount}}</i></span>
+  <span class="mr-1"></span>
+  <span class="badge badge-pill badge-primary"><i class="fa fa-comment">{{article.commentCount}}</i></span>
+</div>
+<div class="card-body">
+<div [innerHTML]="article.contentMain"></div>
+</div>
+</div>
