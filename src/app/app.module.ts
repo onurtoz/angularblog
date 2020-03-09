@@ -10,11 +10,12 @@ import { AdminNavComponent } from './nav/admin-nav/admin-nav.component';
 import { CategoryModel } from './models/category-model';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
    AdminLayoutComponent,
-    AdminNavComponent,
+    AdminNavComponent
   ],
   imports: [
     BrowserModule,

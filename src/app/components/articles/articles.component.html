@@ -35,7 +35,7 @@
 </div>
 
 <ng-template #emptyTemplate>
-<div *ngIf="!articleService.looading" class="alert lart-danger" role="alert">Makale bulunamadı....</div>
+<div *ngIf="!articleService.looading" class="alert alert-danger" role="alert">Makale bulunamadı....</div>
 </ng-template>
 
 <ng-template
@@ -69,7 +69,7 @@
   <span class="mr-1"></span><span class="badge badge-pill badge-success"><i class="fa fa-eye">{{viewCount}}</i></span>
   <span class="mr-1"></span>
   <span class="badge badge-pill badge-primary"><i class="fa fa-comment">{{commentCount}}</i></span>
-   <a [routerLink]="['/article/',articleID]" class="btn btn-primary btn-sm float-right">
+   <a [routerLink]="['/article',title | urlformat,articleID]" class="btn btn-primary btn-sm float-right">
      Devamını oku
    </a>
   </div>

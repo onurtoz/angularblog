@@ -17,7 +17,7 @@ const routes: Routes = [
       component:HomeComponent
     },
     {
-      path:"article/:articleID",
+      path:"article/:title/:articleID",
       component:ArticleComponent
     },
     {
